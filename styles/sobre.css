@@ -1,0 +1,133 @@
+:root {
+  --navy: #0f172a;
+  --ink: #172033;
+  --muted: #5d687a;
+  --surface: #ffffff;
+  --background: #eef2f7;
+  --accent: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  padding: 0.75rem 1.25rem;
+  background: var(--navy);
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible,
+.navbar a[aria-current="page"] {
+  color: #ffffff;
+  background: var(--accent);
+  outline: none;
+}
+
+#sobrenos {
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
+}
+
+.sobre-intro {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sobre-intro h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.descricao {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.equipe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.integrante {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+}
+
+.integrante h2 {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+}
+
+.integrante p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .equipe {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 0.2rem;
+  }
+
+  .navbar a {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #sobrenos {
+    width: min(100% - 1.25rem, 1120px);
+  }
+}

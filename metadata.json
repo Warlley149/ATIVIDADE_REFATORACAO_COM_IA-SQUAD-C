@@ -1,0 +1,20 @@
+{
+  "squad_name": "squad-C",
+  "members": {
+    "html_team": [
+      "A09",
+      "A10"
+    ],
+    "css_team": [
+      "A11",
+      "A12"
+    ]
+  },
+  "experiment_group": "TODO",
+  "technologies": [
+    "HTML5",
+    "CSS3"
+  ],
+  "project_start": "2025-03-01",
+  "project_deadline": "2025-03-28"
+}

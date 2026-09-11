@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6c63ff;
+  --dark: #1e1e2f;
+  --gray: #666;
+  --light: #f7f7fb;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), #5147e8);
+  color: var(--white);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.case-de-sucesso {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.squad-c {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+main h3 {
+  font-size: 1.8rem;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+main p {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.text-desafio,
+.text-solucao,
+.text-resultados {
+  margin-top: 10px;
+}
+
+.prova-visual + img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.quadrado-comentario {
+  background-color: var(--white);
+  padding: 30px;
+  border-left: 6px solid var(--primary);
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.text-depoimento {
+  font-style: italic;
+  color: #444;
+}
+
+.frase {
+  display: block;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.conclusao {
+  margin-top: 60px;
+}
+
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 40px 20px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-info {
+  margin-top: 20px;
+}
+
+.final-footer {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .case-de-sucesso {
+    font-size: 2.2rem;
+  }
+
+  main h3 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+
