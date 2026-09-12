@@ -1,127 +1,150 @@
 <!-- Habilidades - Squad C -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles/habilidades.css" />
-    <title>Habilidades - Squad C</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/habilidades.css?v=2">
+  <title>Habilidades - Squad C</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Navegação principal">
+      <ul>
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+        <li>
+          <a href="sobre.html">Sobre nós</a>
+        </li>
+        <li>
+          <a href="projetos.html">Projetos</a>
+        </li>
+        <li>
+          <a href="contato.html">Contatos</a>
+        </li>
+        <li>
+          <a href="depoimentos.html">Depoimentos</a>
+        </li>
+        <li>
+          <a href="servicos.html">Serviços</a>
+        </li>
+        <li>
+          <a href="habilidades.html" aria-current="page">Habilidades</a>
+        </li>
+        <li>
+          <a href="case-de-sucesso.html">Case de Sucesso</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <ul class="menu">
-          <li class="menu">
-            <a href="#inicio">Home</a>
-          </li>
+  <main id="habilidades">
+    <section class="habilidades-intro" aria-labelledby="titulo-habilidades">
+      <p class="eyebrow">Squad C</p>
+      <h1 id="titulo-habilidades">Habilidades</h1>
+      <p class="descricao">Conheça as principais competências técnicas e diferenciais de cada membro da nossa equipe.</p>
+    </section>
 
-          <li class="menu">
-            <a href="#sobre">Sobre</a>
-          </li>
-
-          <li class="menu">
-            <a href="#projetos">Projetos</a>
-          </li>
-
-          <li class="menu">
-            <a href="#contato">Contato</a>
-          </li>
-
-          <li class="menu">
-            <a href="#servicos">Serviços</a>
-          </li>
-
-          <li class="menu">
-            <a href="#habilidades">Habilidades</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="habilidades">
-        <div class="perfil">
-          <img
-            src="img/WhatsApp Image 2025-12-03 at 19.08.07.jpeg"
-            alt="Foto de Warley"
-          />
-          <h2 class="descricao">
-            Warlley é um desenvolvedor pioneiro, notório por ter criado a
-            primeira versão do site da Uber
-          </h3>
-          <ul class="lista-habilidades">
-            <h3>Skills</h3>
-            <li>Arquitetura de Soluções Críticas</li>
-            <li>Desenvolvimento Full-Stack Fundamental</li>
-            <li>Escalabilidade e Visão Estratégica</li>
-            <li>HTML/CSS & C Language</li>
+    <!-- Grade 2x2 com os integrantes -->
+    <section class="equipe-habilidades" aria-label="Habilidades dos integrantes">
+      <!-- Warlley -->
+      <article class="habilidade-card">
+        <div class="habilidade-topo">
+          <img src="img/WhatsApp Image 2025-12-03 at 19.08.07.jpeg" alt="Foto de Warlley Santos" class="avatar-img" loading="lazy" />
+          <div class="avatar-info">
+            <h2>Warlley Santos</h2>
+            <p class="avatar-papel">Desenvolvedor Pioneiro &bull; Squad C</p>
+          </div>
+        </div>
+        <p class="habilidade-bio">
+          Warlley é um desenvolvedor pioneiro, notório por ter criado a primeira versão do site da Uber e liderar soluções de ponta a ponta.
+        </p>
+        <div class="habilidade-bloco">
+          <h3>Skills &amp; Competências</h3>
+          <ul class="skills-tags">
+            <li class="skill-pill">Arquitetura de Soluções Críticas</li>
+            <li class="skill-pill">Desenvolvimento Full-Stack Fundamental</li>
+            <li class="skill-pill">Escalabilidade &amp; Visão Estratégica</li>
+            <li class="skill-pill">HTML / CSS &amp; Linguagem C</li>
           </ul>
         </div>
-      </section>
+      </article>
 
-      <section class="habilidades">
-        <div class="perfil">
-          <img
-            src="img/WhatsApp Image 2025-12-03 at 19.04.21.jpeg"
-            alt="Foto de Bruno"
-          />
-          <h2 class="descricao">
-            Bruno foi fundamental para a arquitetura de backend que garante a
-            transição de status dos pedidos.
-          </h3>
-          <ul class="lista-habilidades">
-            <h3>Skills</h3>
-            <li>Arquitetura de Sistemas de Backend</li>
-            <li>Design de APIs/Microsserviços</li>
-            <li>Gerenciamento de Banco de Dados e Transações</li>
-            <li>HTML/CSS & Java</li>
+      <!-- Bruno -->
+      <article class="habilidade-card">
+        <div class="habilidade-topo">
+          <img src="img/WhatsApp Image 2025-12-03 at 19.04.21.jpeg" alt="Foto de Bruno Cauã" class="avatar-img" loading="lazy" />
+          <div class="avatar-info">
+            <h2>Bruno Cauã</h2>
+            <p class="avatar-papel">Engenheiro Backend &bull; Squad C</p>
+          </div>
+        </div>
+        <p class="habilidade-bio">
+          Bruno foi fundamental para a arquitetura de backend que garante a transição em tempo real de status dos pedidos em aplicações de alta demanda.
+        </p>
+        <div class="habilidade-bloco">
+          <h3>Skills &amp; Competências</h3>
+          <ul class="skills-tags">
+            <li class="skill-pill">Arquitetura de Sistemas de Backend</li>
+            <li class="skill-pill">Design de APIs &amp; Microsserviços</li>
+            <li class="skill-pill">Bancos de Dados &amp; Transações</li>
+            <li class="skill-pill">HTML / CSS &amp; Java</li>
           </ul>
         </div>
-      </section>
+      </article>
 
-      <section class="habilidades">
-        <div class="perfil">
-          <img
-            src="img/WhatsApp Image 2025-12-03 at 19.02.35.jpeg"
-            alt="Foto de Alessandro"
-          />
-          <h2 class="descricao">
-            Alessandro, um desenvolvedor-chave, foi o responsável por desenhar a
-            interface de demonstração de produtos no app Mercado Livre.
-          </h3>
-          <ul class="lista-habilidades">
-            <h3>Skills</h3>
-            <li>Desenvolvimento Mobile/Multiplataforma</li>
-            <li>Design de Interface do Usuário</li>
-            <li>Design de APIs/Microsserviços</li>
-            <li>HTML/CSS & Java</li>
+      <!-- Alessandro -->
+      <article class="habilidade-card">
+        <div class="habilidade-topo">
+          <img src="img/WhatsApp Image 2025-12-03 at 19.02.35.jpeg" alt="Foto de Alessandro Gomes" class="avatar-img" loading="lazy" />
+          <div class="avatar-info">
+            <h2>Alessandro Gomes</h2>
+            <p class="avatar-papel">UX/UI Designer &amp; Mobile &bull; Squad C</p>
+          </div>
+        </div>
+        <p class="habilidade-bio">
+          Alessandro é especialista em desenhar interfaces de produto e fluxos de navegação que aumentam a retenção e facilitam a conversão do usuário.
+        </p>
+        <div class="habilidade-bloco">
+          <h3>Skills &amp; Competências</h3>
+          <ul class="skills-tags">
+            <li class="skill-pill">Desenvolvimento Mobile &amp; Multiplataforma</li>
+            <li class="skill-pill">Design de Interface do Usuário (UI)</li>
+            <li class="skill-pill">Design de APIs &amp; Microsserviços</li>
+            <li class="skill-pill">HTML / CSS &amp; Java</li>
           </ul>
         </div>
-      </section>
+      </article>
 
-      <section class="habilidades">
-        <div class="perfil">
-          <img
-            src="img/WhatsApp Image 2025-12-03 at 19.07.43.jpeg"
-            alt="Foto de Luís"
-          />
-          <h2 class="descricao">
-           Luís, um engenheiro backend de talento, foi crucial no
-            desenvolvimento da infraestrutura de login do Facebook.
-          </h3>
-          <ul class="lista-habilidades">
-            <h3>Skills</h3>
-            <li>Protocolos de Autenticação</li>
-            <li>Prevenção de Ataques</li>
-            <li>Criptografia e Hashing</li>
-            <li>HTML/CSS & Phyton</li>
+      <!-- Luís -->
+      <article class="habilidade-card">
+        <div class="habilidade-topo">
+          <img src="img/WhatsApp Image 2025-12-03 at 19.07.43.jpeg" alt="Foto de Luís Gabriel" class="avatar-img" loading="lazy" />
+          <div class="avatar-info">
+            <h2>Luís Gabriel</h2>
+            <p class="avatar-papel">Engenheiro de Infra &amp; Segurança &bull; Squad C</p>
+          </div>
+        </div>
+        <p class="habilidade-bio">
+          Luís é especialista em segurança e infraestrutura robusta, com foco em sistemas críticos de autenticação, integridade de dados e proteção de tráfego.
+        </p>
+        <div class="habilidade-bloco">
+          <h3>Skills &amp; Competências</h3>
+          <ul class="skills-tags">
+            <li class="skill-pill">Protocolos de Autenticação</li>
+            <li class="skill-pill">Prevenção de Ataques &amp; Hardening</li>
+            <li class="skill-pill">Criptografia &amp; Hashing</li>
+            <li class="skill-pill">HTML / CSS &amp; Python</li>
           </ul>
         </div>
-      </section>
-    </main>
+      </article>
+    </section>
+  </main>
 
-    <footer>
-      <i>Desenvolvido por Bruno & Alessandro</i>
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <p>Criado por <strong>Bruno &amp; Alessandro</strong> &bull; Squad C</p>
+  </footer>
+</body>
 </html>

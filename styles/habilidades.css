@@ -1,94 +1,237 @@
+/* ==========================================================================
+   Habilidades - Squad C
+   Estilos específicos da página de habilidades, alinhados ao padrão do Squad C
+   ========================================================================== */
+
+:root {
+  --navy: #0f172a;
+  --ink: #172033;
+  --muted: #5d687a;
+  --surface: #ffffff;
+  --background: #eef2f7;
+  --accent: #d97706;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  margin: 0;
-  color: #e2e8f0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #1A1A1E;
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  background: #0B0B0B;
-  width: 100%;
-  z-index: 100;
-  padding: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--navy);
 }
 
-.menu {
+.navbar ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.35rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
-  gap: 3rem;
 }
 
-a {
-  color: #e2e8f0;
+.navbar a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.35rem;
   text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-a:hover {
-  background: #6c63ff;
-  border-radius: 10px;
+.navbar a:hover,
+.navbar a:focus-visible,
+.navbar a[aria-current="page"] {
+  color: #ffffff;
+  background: var(--accent);
+  outline: none;
 }
 
-.habilidades {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#habilidades {
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
 }
 
-.perfil {
+/* Introdução da página */
+.habilidades-intro {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
   text-align: center;
-  padding: 2rem;
 }
 
-.perfil img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 5px 14px 29px 7px rgba(0, 0, 0, 0.6);
-  margin-bottom: 1rem;
-  animation: flutuar 3s ease-in-out infinite;
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.habilidades-intro h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--ink);
 }
 
 .descricao {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #B9A7FF;
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
-.lista-habilidades {
+/* Grade 2x2 dos Integrantes */
+.equipe-habilidades {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.habilidade-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habilidade-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
+}
+
+.habilidade-topo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.avatar-img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  flex-shrink: 0;
+}
+
+.avatar-info h2 {
+  margin: 0 0 0.25rem;
+  color: var(--accent);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.avatar-papel {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.habilidade-bio {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.habilidade-bloco h3 {
+  margin: 0 0 0.85rem;
+  color: var(--navy);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.skills-tags {
   list-style: none;
   padding: 0;
-  color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
-.lista-habilidades li {
-  margin: 0.5rem 0;
+.skill-pill {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
 }
 
-@keyframes flutuar {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+/* Rodapé */
+.site-footer {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  border-top: 1px solid #dbe2eb;
 }
 
-footer {
-  text-align: end;
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer strong {
+  color: var(--ink);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .equipe-habilidades {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 0.2rem;
+  }
+
+  .navbar a {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #habilidades {
+    width: min(100% - 1.25rem, 1120px);
+    padding: 2rem 0;
+  }
+
+  .habilidade-card {
+    padding: 1.25rem;
+  }
+
+  .habilidade-topo {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
 }

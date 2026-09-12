@@ -1,159 +1,448 @@
+/* ==========================================================================
+   Case de Sucesso - Squad C
+   Estilos específicos do estudo de caso, alinhados ao padrão visual do Squad C
+   ========================================================================== */
+
+:root {
+  --navy: #0f172a;
+  --ink: #172033;
+  --muted: #5d687a;
+  --surface: #ffffff;
+  --background: #eef2f7;
+  --accent: #d97706;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --primary: #6c63ff;
-  --dark: #1e1e2f;
-  --gray: #666;
-  --light: #f7f7fb;
-  --white: #ffffff;
-}
-
 body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light);
-  color: var(--dark);
-  line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(135deg, var(--primary), #5147e8);
-  color: var(--white);
-  padding: 40px 20px;
-  text-align: center;
+.navbar {
+  padding: 0.75rem 1.25rem;
+  background: var(--navy);
 }
 
-nav {
+.navbar ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-bottom: 30px;
+  gap: 0.35rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
-nav a {
-  color: var(--white);
+.navbar a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.35rem;
   text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.3s;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav a:hover {
-  opacity: 0.8;
+.navbar a:hover,
+.navbar a:focus-visible,
+.navbar a[aria-current="page"] {
+  color: #ffffff;
+  background: var(--accent);
+  outline: none;
 }
 
-.case-de-sucesso {
-  font-size: 3rem;
-  margin-bottom: 10px;
+#case-sucesso {
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
 }
 
-.squad-c {
-  font-size: 1.2rem;
-  font-weight: 300;
-  opacity: 0.9;
-}
-
-main {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-main h3 {
-  font-size: 1.8rem;
-  margin-top: 50px;
-  margin-bottom: 15px;
-  color: var(--primary);
-}
-
-main p {
-  font-size: 1rem;
-  color: var(--gray);
-}
-
-.text-desafio,
-.text-solucao,
-.text-resultados {
-  margin-top: 10px;
-}
-
-.prova-visual + img {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: 25px auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.quadrado-comentario {
-  background-color: var(--white);
-  padding: 30px;
-  border-left: 6px solid var(--primary);
-  border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.text-depoimento {
-  font-style: italic;
-  color: #444;
-}
-
-.frase {
-  display: block;
-  margin-top: 15px;
-  font-style: normal;
-  font-weight: bold;
-  color: var(--dark);
-}
-
-.conclusao {
-  margin-top: 60px;
-}
-
-footer {
-  background-color: var(--dark);
-  color: var(--white);
-  padding: 40px 20px;
-  margin-top: 80px;
+/* Introdução da página */
+.case-intro {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
   text-align: center;
 }
 
-footer a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.case-intro h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--ink);
 }
 
-.footer-info {
-  margin-top: 20px;
+.descricao {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
-.final-footer {
+/* Hero Card */
+.case-hero-card {
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.case-hero-card h2 {
+  margin: 0 0 0.75rem;
+  color: var(--navy);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+}
+
+.hero-texto {
+  margin: 0 auto;
+  max-width: 750px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* Estrutura Geral dos Cards */
+.case-card {
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-card:hover {
+  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
+}
+
+.case-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.case-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.case-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tags de Seção */
+.card-tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.tag-problema {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tag-desafio {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.tag-solucao {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tag-visual {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.tag-resultados {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.tag-depoimento {
+  background: #faf5ff;
+  color: #7e22ce;
+  border: 1px solid #e9d5ff;
+}
+
+/* Grid Dupla: Problema e Desafio */
+.case-grid-dupla {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 2rem;
+}
+
+.case-grid-dupla .case-card {
+  margin-bottom: 0;
+}
+
+.desafio-lista {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.desafio-lista li {
+  margin-bottom: 0.35rem;
+}
+
+/* Pilares da Solução */
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.pilar-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.pilar-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.pilar-item h4 {
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.pilar-item p {
+  margin: 0;
   font-size: 0.9rem;
-  opacity: 0.85;
 }
 
-@media (max-width: 768px) {
-  .case-de-sucesso {
-    font-size: 2.2rem;
+/* Prova Visual */
+.prova-img-wrapper {
+  margin: 1.5rem auto 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.prova-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.prova-legenda {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* Métricas de Resultados */
+.metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.metrica-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.5rem 0.75rem;
+  text-align: center;
+}
+
+.metrica-valor {
+  display: block;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+  line-height: 1.1;
+}
+
+.metrica-rotulo {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Depoimento do Cliente */
+.depoimento-bloco {
+  margin: 0;
+  padding: 0;
+}
+
+.aspas-icone {
+  color: var(--accent);
+  font-size: 2.75rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.depoimento-bloco p {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.depoimento-bloco cite {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+
+.depoimento-bloco cite strong {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.depoimento-bloco cite span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Conclusão & CTA */
+.cta-secao {
+  text-align: center;
+}
+
+.cta-box {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.35rem;
+  margin-top: 0.75rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-cta:hover {
+  background: #b45309;
+  transform: translateY(-2px);
+}
+
+/* Rodapé */
+.site-footer {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  border-top: 1px solid #dbe2eb;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer strong {
+  color: var(--ink);
+}
+
+/* Responsividade */
+@media (max-width: 850px) {
+  .case-grid-dupla {
+    grid-template-columns: 1fr;
   }
 
-  main h3 {
-    font-size: 1.5rem;
+  .pilares-grid {
+    grid-template-columns: 1fr;
   }
 
-  nav {
-    flex-wrap: wrap;
-    gap: 15px;
+  .metricas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 0.2rem;
+  }
 
+  .navbar a {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #case-sucesso {
+    width: min(100% - 1.25rem, 1120px);
+    padding: 2rem 0;
+  }
+
+  .metricas-grid {
+    grid-template-columns: 1fr;
+  }
+}
