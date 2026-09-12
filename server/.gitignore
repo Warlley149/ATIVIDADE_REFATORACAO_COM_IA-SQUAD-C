@@ -1,0 +1,11 @@
+# Dependências locais
+node_modules/
+npm-debug.log*
+
+# Variáveis de ambiente sensíveis
+.env
+*.env
+.env.local
+
+# Modelo público permitido
+!.env.example
