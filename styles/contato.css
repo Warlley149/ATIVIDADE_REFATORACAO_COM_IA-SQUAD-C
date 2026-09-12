@@ -1,115 +1,262 @@
-/* Estilos base - personalize para seu squad */
+/* ==========================================================================
+   Contatos - Squad C
+   Estilos específicos da página de contatos (navbar e variáveis vêm de home.css)
+   ========================================================================== */
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               'Segoe UI', sans-serif;
-               margin:0;
-               padding:0;
-               line-height: 1.5;
+#contato {
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
 }
 
-header {
-  padding: 2rem;
-  background-color: #f5f5f5;
+/* Introdução da página */
+.contato-intro {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
 }
 
-main{
-  padding:2rem;
+.contato-intro h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--ink);
 }
 
-.contato-squad {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+/* Layout Principal em 2 Colunas */
+.contato-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
 }
 
-header p{
-  margin:0;
+/* Card do Formulário */
+.contato-form-card {
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
 }
 
-.email-destaque{
+.contato-form-card h2 {
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.form-info {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.email-destaque {
+  color: var(--accent);
   font-weight: 600;
-  color:#1a73e8;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.form-squad section {
-  max-width: 480px;
-  margin-bottom: 2rem;
+.email-destaque:hover {
+  text-decoration: underline;
 }
 
-.form-squad form {
+/* Campos do Formulário */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-grupo label {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.campo-grupo input[type="text"],
+.campo-grupo input[type="email"],
+.campo-grupo textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #f8fafc;
+  border: 1px solid #dbe2eb;
+  border-radius: 0.35rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.campo-grupo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.btn-enviar {
+  align-self: flex-start;
+  padding: 0.8rem 1.8rem;
+  color: #ffffff;
+  background: var(--accent);
+  border: none;
+  border-radius: 0.35rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background: #b45309;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+}
+
+.btn-enviar:active {
+  transform: translateY(0);
+}
+
+/* Seção de Contatos Diretos da Equipe */
+.secao-subtitulo {
+  margin: 0 0 1.25rem;
+  color: var(--navy);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+}
+
+.membros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.25rem);
+}
+
+.membro-card {
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.25rem, 2.5vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.membro-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
+}
+
+.membro-card h3 {
+  margin: 0 0 0.25rem;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.membro-papel {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.membro-dados {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin-top: auto;
 }
 
-.form-squad label{
-  font-weight: 500;
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-.form-squad input[type="text"]
-.form-squad input[type="email"]
-.form-squad textarea{
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.dado-rotulo {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.form-squad input[type="submit"]{
-  align-self: flex-start;
-  padding:0.5rem 1.25rem;
-  border: none;
-  border-radius: 4px;
-  background-color:#1a73e8;
-  color:#fff;
-cursor: pointer;
+.dado-link {
+  color: var(--ink);
+  font-size: 0.92rem;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease;
 }
 
-.contato-pessoal{
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
-.form-warlley,
-.form-bruno,
-.form-alessandro,
-.form-luis{
-  margin-bottom: 1.5rem;
-}
-
-.form-warlley section,
-.form-bruno section,
-.form-alessandro section,
-.form-luis section {
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 6px;
-}
-
-warlleysquadc@gmail.com(warlley)
-a[href^="warlley:"]
-brunosquadc@gmail.com(bruno)
-a[href^=bruno:]
-alessandrosquadc@gmail.com(alessandro)
-a[href^=alessandro:]
-luissquadc@gmail.com
-a[href^=luis: ]{
-  color: #1a73e8;
-  text-decoration:&none;
-}
-
-a[herf^="warlley:"]:hover{
+.dado-link:hover {
+  color: var(--accent);
   text-decoration: underline;
 }
 
-a[herf^="bruno:"]:hover{
-  text-decoration:underline;
+/* Rodapé */
+.site-footer {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  border-top: 1px solid #dbe2eb;
 }
 
-a[href^="alessandro:"]:hover{
-  text-decoration:underline;
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
-a[href^="luis:"]: hover{
-  text-decoration: underline;
+.site-footer strong {
+  color: var(--ink);
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+  .contato-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .membros-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #contato {
+    width: min(100% - 1.25rem, 1120px);
+    padding: 2rem 0;
+  }
+
+  .contato-form-card {
+    padding: 1.25rem;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    text-align: center;
+  }
 }
