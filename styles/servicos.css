@@ -1,117 +1,335 @@
+/* ==========================================================================
+   Serviços - Squad C
+   Estilos específicos da página de serviços, alinhados ao padrão do Squad C
+   ========================================================================== */
+
+:root {
+  --navy: #0f172a;
+  --ink: #172033;
+  --muted: #5d687a;
+  --surface: #ffffff;
+  --background: #eef2f7;
+  --accent: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  min-width: 320px;
   margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  padding: 0.75rem 1.25rem;
+  background: var(--navy);
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 0;
-  background-color: #1c1c1c;
-  font-family: Arial, sans-serif;
-  color: #f2f2f2;
+  list-style: none;
 }
 
-header {
+.navbar a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible,
+.navbar a[aria-current="page"] {
+  color: #ffffff;
+  background: var(--accent);
+  outline: none;
+}
+
+#servicos {
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) 0;
+}
+
+/* Introdução da página */
+.servicos-intro {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
   text-align: center;
-  padding: 40px 20px;
 }
 
-header h1 {
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.servicos-intro h1 {
   margin: 0;
-  font-size: 36px;
-  letter-spacing: 1px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--ink);
 }
 
-header h3 {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #cfcfcf;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+.descricao {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
-main {
+/* Cabeçalho das Seções */
+.secao-cabecalho {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  text-align: center;
+}
+
+.secao-cabecalho h2 {
+  margin: 0 0 0.5rem;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+}
+
+.secao-cabecalho p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Grade de Serviços Principais */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.servico-card {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 0 20px 40px 20px;
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-section {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
+.servico-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
 }
 
-section h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
+.servico-icone {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
 }
 
-section p {
-  font-size: 15px;
-  color: #c7c7c7;
+.servico-card h3 {
+  margin: 0 0 0.6rem;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px;
+.servico-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
+/* Seção de Soluções Especializadas */
+.secao-solucoes {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.solucoes-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
 }
 
-ul li {
-  background: #262626;
-  padding: 25px;
-  border-radius: 10px;
-  transition: 0.3s;
+.solucao-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  padding: clamp(1.25rem, 2vw, 1.5rem);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-ul li:hover {
-  background: #313131;
+.solucao-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
 }
 
-ul li strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-  letter-spacing: 1px;
+.solucao-img-box {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
-footer {
-  background: #141414;
-  padding: 50px 20px;
+.solucao-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.solucao-conteudo h3 {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.solucao-conteudo p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* Seção Por que escolher o Squad C + CTA */
+.secao-cta {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
   text-align: center;
 }
 
-footer img {
-  max-width: 120px;
-  display: block;
-  margin: 20px auto 10px auto;
+.cta-card h2 {
+  margin: 0 0 0.85rem;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  font-weight: 700;
 }
 
-footer h4 {
-  margin: 15px 0 5px 0;
-  font-size: 18px;
+.cta-descricao {
+  margin: 0 auto 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 650px;
 }
 
-footer p {
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  color: #d1d1d1;
-  font-size: 15px;
+.cta-preco {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-footer a {
+.btn-whatsapp {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #00a884;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 0.85rem 2.2rem;
+  background: #25d366;
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.35rem;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-footer a:hover {
-  background: #00c095;
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.38);
+}
+
+/* Rodapé */
+.site-footer {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  border-top: 1px solid #dbe2eb;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer strong {
+  color: var(--ink);
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .solucoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 0.2rem;
+  }
+
+  .navbar a {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #servicos {
+    width: min(100% - 1.25rem, 1120px);
+    padding: 2rem 0;
+  }
+
+  .solucao-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

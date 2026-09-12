@@ -3,58 +3,159 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/servicos.css?v=2">
   <title>Serviços - Squad C</title>
 </head>
 <body>
   <header>
-    <h1><strong>SERVIÇOS</strong></h1>
-    <h3>Transformando ideias em soluções digitais que funcionam de verdade.</h3>
-  </header>
-  <main>
-    <section>
-      <h2>O que oferecemos</h2>
-      <p>No Squad C, oferecemos uma gama completa de serviços para levar seu projeto do conceito à realidade. Nossa equipe especializada está pronta para ajudar em cada etapa do processo.</p>
+    <nav class="navbar" aria-label="Navegação principal">
       <ul>
-        <li><strong>Consultoria de TI:</strong> Analisamos suas necessidades e fornecemos soluções personalizadas para otimizar seus processos.</li>
-        <li><strong>Desenvolvimento de Software:</strong> Criamos aplicações sob medida, utilizando as tecnologias mais recentes para garantir desempenho e escalabilidade.</li>
-        <li><strong>Design UX/UI:</strong> Desenvolvemos interfaces intuitivas e atraentes que proporcionam uma experiência excepcional ao usuário.</li>
-        <li><strong>Marketing Digital:</strong> Ajudamos a promover sua marca online através de estratégias eficazes de SEO, mídias sociais e campanhas publicitárias.</li>
-        <li><strong>Suporte Técnico:</strong> Oferecemos suporte contínuo para garantir que suas soluções digitais funcionem sem problemas.</li>
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+        <li>
+          <a href="sobre.html">Sobre nós</a>
+        </li>
+        <li>
+          <a href="projetos.html">Projetos</a>
+        </li>
+        <li>
+          <a href="contato.html">Contatos</a>
+        </li>
+        <li>
+          <a href="depoimentos.html">Depoimentos</a>
+        </li>
+        <li>
+          <a href="servicos.html" aria-current="page">Serviços</a>
+        </li>
       </ul>
+    </nav>
+  </header>
+
+  <main id="servicos">
+    <section class="servicos-intro" aria-labelledby="titulo-servicos">
+      <p class="eyebrow">Squad C</p>
+      <h1 id="titulo-servicos">Serviços</h1>
+      <p class="descricao">Transformando ideias em soluções digitais que funcionam de verdade.</p>
     </section>
 
-    <section>
-      <h2>Por que escolher o Squad C?</h2>
-      <p>Nossa abordagem centrada no cliente, combinada com nossa expertise técnica, nos permite entregar resultados excepcionais. Trabalhamos em estreita colaboração com nossos clientes para entender suas necessidades e superar suas expectativas.</p>
+    <!-- O que oferecemos (Grid de Serviços Principais) -->
+    <section class="secao-servicos" aria-labelledby="titulo-oferecemos">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-oferecemos">O que oferecemos</h2>
+        <p>No Squad C, oferecemos uma gama completa de soluções para levar seu projeto do conceito à realidade.</p>
+      </div>
+
+      <div class="servicos-grid">
+        <article class="servico-card">
+          <div class="servico-icone" aria-hidden="true">&#9881;</div>
+          <h3>Consultoria de TI</h3>
+          <p>Analisamos suas necessidades e fornecemos soluções personalizadas para otimizar seus processos de tecnologia e negócios.</p>
+        </article>
+
+        <article class="servico-card">
+          <div class="servico-icone" aria-hidden="true">&#60;&#47;&#62;</div>
+          <h3>Desenvolvimento de Software</h3>
+          <p>Criamos aplicações web e sistemas sob medida, utilizando tecnologias modernas para garantir alta performance e escalabilidade.</p>
+        </article>
+
+        <article class="servico-card">
+          <div class="servico-icone" aria-hidden="true">&#127912;</div>
+          <h3>Design UX/UI</h3>
+          <p>Desenvolvemos interfaces intuitivas, belas e centradas no usuário, proporcionando uma experiência digital fluida e memorável.</p>
+        </article>
+
+        <article class="servico-card">
+          <div class="servico-icone" aria-hidden="true">&#128200;</div>
+          <h3>Marketing Digital</h3>
+          <p>Ajudamos a promover sua marca online através de estratégias sólidas de SEO, posicionamento digital e atração de novos clientes.</p>
+        </article>
+
+        <article class="servico-card">
+          <div class="servico-icone" aria-hidden="true">&#128737;</div>
+          <h3>Suporte Técnico</h3>
+          <p>Oferecemos acompanhamento contínuo e manutenção preventiva para que suas soluções digitais operem sempre com estabilidade.</p>
+        </article>
+
+        <article class="servico-card">
+          <div class="servico-icone" aria-hidden="true">&#128640;</div>
+          <h3>Soluções Customizadas</h3>
+          <p>Projetos e funcionalidades customizadas de ponta a ponta, alinhando visão técnica e resultado comercial com agilidade.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Soluções Sob Medida (Com as logos e referências de mercado) -->
+    <section class="secao-solucoes" aria-labelledby="titulo-solucoes">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-solucoes">Soluções Especializadas</h2>
+        <p>Desenvolvemos funcionalidades e módulos inspirados nos maiores produtos digitais do mercado.</p>
+      </div>
+
+      <div class="solucoes-grid">
+        <article class="solucao-card">
+          <div class="solucao-img-box">
+            <img src="img/mercado_livre-servicos1.png" alt="Logo Mercado Livre" class="solucao-img" loading="lazy" />
+          </div>
+          <div class="solucao-conteudo">
+            <h3>Redesign de Interface (UI)</h3>
+            <p>Criamos uma interface moderna e intuitiva para sua plataforma de delivery, marketplace ou rede social.</p>
+          </div>
+        </article>
+
+        <article class="solucao-card">
+          <div class="solucao-img-box">
+            <img src="img/logo_servicos.png" alt="Logo Construção de Sites" class="solucao-img" loading="lazy" />
+          </div>
+          <div class="solucao-conteudo">
+            <h3>Construção de Site do Zero</h3>
+            <p>Landing pages de alta conversão ou sites completos para apresentar seu negócio digital com autoridade.</p>
+          </div>
+        </article>
+
+        <article class="solucao-card">
+          <div class="solucao-img-box">
+            <img src="img/logo_ifood-servicos.png" alt="Logo iFood" class="solucao-img" loading="lazy" />
+          </div>
+          <div class="solucao-conteudo">
+            <h3>Painéis Administrativos</h3>
+            <p>Painéis de gestão com tabelas, gráficos de indicadores, listagens e fluxos operacionais completos.</p>
+          </div>
+        </article>
+
+        <article class="solucao-card">
+          <div class="solucao-img-box">
+            <img src="img/logo_uber-servicos.png" alt="Logo Uber" class="solucao-img" loading="lazy" />
+          </div>
+          <div class="solucao-conteudo">
+            <h3>Microssistemas Específicos</h3>
+            <p>Rastreamento de pedidos, checkout integrado, sistema de anúncios ou mapa interativo com motoristas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Por que escolher o Squad C + CTA WhatsApp -->
+    <section class="secao-cta" aria-labelledby="titulo-cta">
+      <div class="cta-card">
+        <h2 id="titulo-cta">Por que escolher o Squad C?</h2>
+        <p class="cta-descricao">
+          Nossa abordagem centrada no cliente, combinada com nossa expertise técnica, nos permite entregar resultados excepcionais. Trabalhamos em estreita colaboração para entender suas necessidades e superar suas expectativas.
+        </p>
+        <div class="cta-acao">
+          <p class="cta-preco">Consulte nossos preços e solicite um orçamento:</p>
+          <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    <img src="img/mercado_livre-servicos1.png" alt="mercado_livre-servicos1" />
-    <h4>Redesign de interface (UI)</h4>
-    <p>Criamos uma interface moderna e intuitiva para sua plataforma de delivery/marketplace/redes sociais.</p>
 
-    <img src="img/logo_servicos.png" alt="logo_servicos" />
-    <h4>Construção de site do zero (landing page ou site completo)</h4>
-    <p>Desenvolvemos o site perfeito para apresentar o seu negócio digital.</p>
-
-    <img src="img/logo_ifood-servicos.png" alt="logo_ifood-servicos"/>
-    <h4>Painéis administrativos personalizados</h4>
-    <p>Criamos um painel para gerenciar entregadores, motoristas, vendedores ou restaurantes.”
-O que entregam: uma página administrativa com tabelas, gráficos básicos, listagens e botões fictícios.
-Exemplo: painel do tipo iFood para restaurante ver pedidos, tempo médio, status.</p>
-
-<img src="img/logo_uber-servicos.png" alt="logo_uber-servicos"/>
-    <h4>Microsistemas específicos</h4>
-    <p>Montamos funcionalidades que empresas gigantes usam, mas personalizadas para sua marca.
-O que entregamos:
-
-Sistema de rastreamento de pedidos (versão delivery)
-Sistema de anúncios (versão Facebook)
-Carrinho e checkout (versão Mercado Livre)
-Mapa com motoristas (versão Uber, estilizada)</p>
-
-<h2><strong><i>Consulte nossos preços:</i></strong></h2>
-<a href="https://web.whatsapp.com/">WhatsApp</a>
+  <footer class="site-footer">
+    <p>Criado por <strong>Squad C</strong> &bull; Design &amp; Soluções Digitais</p>
   </footer>
 </body>
 </html>
