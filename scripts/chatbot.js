@@ -37,7 +37,7 @@
             </div>
             <div>
               <h2 class="squad-chat-title" id="squad-chat-title">Squad C IA</h2>
-              <p class="squad-chat-status">Gemini 3.7 Flash</p>
+              <p class="squad-chat-status">Gemini 3.8 Flash</p>
             </div>
           </div>
           <button type="button" class="squad-chat-close-btn" id="squad-chat-close" aria-label="Fechar chat">

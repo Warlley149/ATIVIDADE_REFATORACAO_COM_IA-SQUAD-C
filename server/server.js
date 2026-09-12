@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MODEL = process.env.GEMINI_MODEL || 'gemini-3.7-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 
 // Middlewares
 app.use(cors());
@@ -106,7 +106,7 @@ app.post('/api/chat', async (req, res) => {
     });
 
     // Modelos para fallback caso ocorra 503 (alta demanda)
-    const fallbackModels = [MODEL, 'gemini-3.6-flash', 'gemini-3.7-flash']
+    const fallbackModels = [MODEL, 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash']
       .filter((m, idx, arr) => arr.indexOf(m) === idx);
 
     let lastError = null;
