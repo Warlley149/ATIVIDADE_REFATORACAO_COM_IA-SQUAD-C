@@ -1,7 +1,61 @@
 /* ==========================================================================
    Contatos - Squad C
-   Estilos específicos da página de contatos (navbar e variáveis vêm de home.css)
+   Estilos específicos da página de contatos, alinhados rigorosamente a sobre.css
    ========================================================================== */
+
+:root {
+  --navy: #0f172a;
+  --ink: #172033;
+  --muted: #5d687a;
+  --surface: #ffffff;
+  --background: #eef2f7;
+  --accent: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  padding: 0.75rem 1.25rem;
+  background: var(--navy);
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible,
+.navbar a[aria-current="page"] {
+  color: #ffffff;
+  background: var(--accent);
+  outline: none;
+}
 
 #contato {
   width: min(100% - 2rem, 1120px);
@@ -15,6 +69,15 @@
   text-align: center;
 }
 
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .contato-intro h1 {
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -22,72 +85,123 @@
   color: var(--ink);
 }
 
-/* Layout Principal em 2 Colunas */
-.contato-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: start;
+.descricao {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
-/* Card do Formulário */
-.contato-form-card {
+/* Grade 2x2 dos Integrantes - Idêntico a sobre.css */
+.equipe-contatos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.integrante-contato {
+  padding: clamp(1.25rem, 3vw, 2rem);
   background: var(--surface);
   border: 1px solid #dbe2eb;
   border-radius: 0.5rem;
   box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.integrante-contato:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
+}
+
+.integrante-contato h2 {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+}
+
+.contato-info p {
+  margin: 0.4rem 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contato-info strong {
+  color: var(--ink);
+}
+
+.contato-info a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contato-info a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Formulário de Contato Centralizado */
+.form-secao {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.form-card {
+  max-width: 650px;
+  margin: 0 auto;
   padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--surface);
+  border: 1px solid #dbe2eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
 }
 
-.contato-form-card h2 {
+.form-card h2 {
   margin: 0 0 0.5rem;
-  color: var(--navy);
-  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
-  font-weight: 700;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  text-align: center;
 }
 
-.form-info {
+.form-descricao {
   margin: 0 0 1.5rem;
   color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.5;
+  text-align: center;
 }
 
 .email-destaque {
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .email-destaque:hover {
   text-decoration: underline;
 }
 
-/* Campos do Formulário */
 .form-contato {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
-.campo-grupo {
+.campo {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
-.campo-grupo label {
+.campo label {
   color: var(--ink);
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.campo-grupo input[type="text"],
-.campo-grupo input[type="email"],
-.campo-grupo textarea {
+.campo input[type="text"],
+.campo input[type="email"],
+.campo textarea {
   width: 100%;
-  padding: 0.75rem 0.9rem;
+  padding: 0.7rem 0.85rem;
   font-family: inherit;
   font-size: 0.95rem;
   color: var(--ink);
@@ -97,13 +211,13 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.campo-grupo textarea {
+.campo textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 100px;
 }
 
-.campo-grupo input:focus,
-.campo-grupo textarea:focus {
+.campo input:focus,
+.campo textarea:focus {
   outline: none;
   background-color: #ffffff;
   border-color: var(--accent);
@@ -111,107 +225,22 @@
 }
 
 .btn-enviar {
-  align-self: flex-start;
-  padding: 0.8rem 1.8rem;
+  align-self: center;
+  padding: 0.75rem 2.5rem;
   color: #ffffff;
   background: var(--accent);
   border: none;
   border-radius: 0.35rem;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .btn-enviar:hover {
   background: #b45309;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
-}
-
-.btn-enviar:active {
-  transform: translateY(0);
-}
-
-/* Seção de Contatos Diretos da Equipe */
-.secao-subtitulo {
-  margin: 0 0 1.25rem;
-  color: var(--navy);
-  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
-  font-weight: 700;
-}
-
-.membros-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 1.25rem);
-}
-
-.membro-card {
-  background: var(--surface);
-  border: 1px solid #dbe2eb;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.75rem 1.5rem rgb(15 23 42 / 8%);
-  padding: clamp(1.25rem, 2.5vw, 1.5rem);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.membro-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgb(15 23 42 / 12%);
-}
-
-.membro-card h3 {
-  margin: 0 0 0.25rem;
-  color: var(--accent);
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.membro-papel {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.membro-dados {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: auto;
-}
-
-.dado-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.dado-rotulo {
-  color: var(--muted);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.dado-link {
-  color: var(--ink);
-  font-size: 0.92rem;
-  text-decoration: none;
-  word-break: break-all;
-  transition: color 0.2s ease;
-}
-
-.dado-link:hover {
-  color: var(--accent);
-  text-decoration: underline;
 }
 
 /* Rodapé */
@@ -233,30 +262,36 @@
 }
 
 /* Responsividade */
-@media (max-width: 960px) {
-  .contato-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .membros-grid {
+@media (max-width: 700px) {
+  .equipe-contatos {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
+  .navbar ul {
+    gap: 0.2rem;
+  }
+
+  .navbar a {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
   #contato {
     width: min(100% - 1.25rem, 1120px);
     padding: 2rem 0;
   }
 
-  .contato-form-card {
+  .integrante-contato {
+    padding: 1.25rem;
+  }
+
+  .form-card {
     padding: 1.25rem;
   }
 
   .btn-enviar {
     width: 100%;
-    text-align: center;
   }
 }

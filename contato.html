@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/home.css">
-  <link rel="stylesheet" href="styles/contato.css?v=2">
+  <link rel="stylesheet" href="styles/contato.css?v=3">
   <title>Contatos - Squad C</title>
 </head>
 <body>
@@ -38,104 +38,72 @@
     <section class="contato-intro" aria-labelledby="titulo-contato">
       <p class="eyebrow">Squad C</p>
       <h1 id="titulo-contato">Contatos</h1>
-      <p class="descricao">Entre em contato conosco através do formulário ou diretamente com os membros da equipe.</p>
+      <p class="descricao">Entre em contato conosco através dos canais dos integrantes ou envie uma mensagem direta.</p>
     </section>
 
-    <div class="contato-layout">
-      <!-- Formulário de Contato Geral -->
-      <section class="contato-form-card" aria-labelledby="titulo-form">
+    <!-- Grade 2x2 com os integrantes - padrão idêntico a sobre.html e projetos.html -->
+    <section class="equipe-contatos" aria-label="Contatos dos integrantes">
+      <article class="integrante-contato">
+        <h2>Warlley Santos</h2>
+        <div class="contato-info">
+          <p><strong>E-mail:</strong> <a href="mailto:warlleysquadc@gmail.com">warlleysquadc@gmail.com</a></p>
+          <p><strong>Telefone:</strong> <a href="tel:+5581912345678">(81) 91234-5678</a></p>
+        </div>
+      </article>
+
+      <article class="integrante-contato">
+        <h2>Bruno Cauã</h2>
+        <div class="contato-info">
+          <p><strong>E-mail:</strong> <a href="mailto:brunosquadc@gmail.com">brunosquadc@gmail.com</a></p>
+          <p><strong>Telefone:</strong> <a href="tel:+5581978563409">(81) 97856-3409</a></p>
+        </div>
+      </article>
+
+      <article class="integrante-contato">
+        <h2>Alessandro Gomes</h2>
+        <div class="contato-info">
+          <p><strong>E-mail:</strong> <a href="mailto:alessandrosquadc@gmail.com">alessandrosquadc@gmail.com</a></p>
+          <p><strong>Telefone:</strong> <a href="tel:+5581912454567">(81) 91245-4567</a></p>
+        </div>
+      </article>
+
+      <article class="integrante-contato">
+        <h2>Luís Gabriel</h2>
+        <div class="contato-info">
+          <p><strong>E-mail:</strong> <a href="mailto:luissquadc@gmail.com">luissquadc@gmail.com</a></p>
+          <p><strong>Telefone:</strong> <a href="tel:+5581966880055">(81) 96688-0055</a></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Formulário de Mensagem elegante e centralizado -->
+    <section class="form-secao" aria-labelledby="titulo-form">
+      <div class="form-card">
         <h2 id="titulo-form">Envie uma Mensagem</h2>
-        <p class="form-info">
-          Canal oficial do time: <a href="mailto:squadc123@gmail.com" class="email-destaque">squadc123@gmail.com</a>
+        <p class="form-descricao">
+          Canal oficial da equipe: <a href="mailto:squadc123@gmail.com" class="email-destaque">squadc123@gmail.com</a>
         </p>
 
-        <form class="form-contato" action="https://example.com/enviar-contato" method="post">
-          <div class="campo-grupo">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+        <form action="https://example.com/enviar-contato" method="post" class="form-contato">
+          <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
           </div>
 
-          <div class="campo-grupo">
-            <label for="email">E-mail para retorno</label>
+          <div class="campo">
+            <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
           </div>
 
-          <div class="campo-grupo">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua solicitação, dúvida ou proposta..." required></textarea>
+          <div class="campo">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
           </div>
 
-          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+          <button type="submit" class="btn-enviar">Enviar</button>
         </form>
-      </section>
-
-      <!-- Contatos Pessoais dos Integrantes -->
-      <section class="contato-equipe-secao" aria-labelledby="titulo-equipe-contato">
-        <h2 id="titulo-equipe-contato" class="secao-subtitulo">Contatos Diretos dos Integrantes</h2>
-        
-        <div class="membros-grid">
-          <article class="membro-card">
-            <h3>Warlley Santos</h3>
-            <p class="membro-papel">Desenvolvedor &bull; Squad C</p>
-            <div class="membro-dados">
-              <div class="dado-item">
-                <span class="dado-rotulo">E-mail</span>
-                <a href="mailto:warlleysquadc@gmail.com" class="dado-link">warlleysquadc@gmail.com</a>
-              </div>
-              <div class="dado-item">
-                <span class="dado-rotulo">Telefone</span>
-                <a href="tel:+5581912345678" class="dado-link">(81) 91234-5678</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="membro-card">
-            <h3>Bruno Cauã</h3>
-            <p class="membro-papel">Desenvolvedor &bull; Squad C</p>
-            <div class="membro-dados">
-              <div class="dado-item">
-                <span class="dado-rotulo">E-mail</span>
-                <a href="mailto:brunosquadc@gmail.com" class="dado-link">brunosquadc@gmail.com</a>
-              </div>
-              <div class="dado-item">
-                <span class="dado-rotulo">Telefone</span>
-                <a href="tel:+5581978563409" class="dado-link">(81) 97856-3409</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="membro-card">
-            <h3>Alessandro Gomes</h3>
-            <p class="membro-papel">Desenvolvedor &bull; Squad C</p>
-            <div class="membro-dados">
-              <div class="dado-item">
-                <span class="dado-rotulo">E-mail</span>
-                <a href="mailto:alessandrosquadc@gmail.com" class="dado-link">alessandrosquadc@gmail.com</a>
-              </div>
-              <div class="dado-item">
-                <span class="dado-rotulo">Telefone</span>
-                <a href="tel:+5581912454567" class="dado-link">(81) 91245-4567</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="membro-card">
-            <h3>Luís Gabriel</h3>
-            <p class="membro-papel">Desenvolvedor &bull; Squad C</p>
-            <div class="membro-dados">
-              <div class="dado-item">
-                <span class="dado-rotulo">E-mail</span>
-                <a href="mailto:luissquadc@gmail.com" class="dado-link">luissquadc@gmail.com</a>
-              </div>
-              <div class="dado-item">
-                <span class="dado-rotulo">Telefone</span>
-                <a href="tel:+5581966880055" class="dado-link">(81) 96688-0055</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
